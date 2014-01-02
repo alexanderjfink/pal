@@ -8,7 +8,7 @@ requirejs.config({
 		stickit: 'backbone.stickit/backbone.stickit',
 		underscore: 'underscore/underscore',
 		fastclick: 'fastclick/fastclick',
-		foundation: 'foundation/foundation.js'
+		foundation: 'foundation/foundation'
 	},
 	shim: {
 		'backbone': {
@@ -32,7 +32,13 @@ require(['jquery',
 	
 	window.app = app;
 
-	// $(document).foundation();
+	// Load up foundation once page is loaded
+	setTimeout(function() {
+		require(['foundation'], function (foundation) {
+			$(document).foundation();
+		});
+	});
+	
 	
 	// This makes links hit the router instead of redirecting
 	$(document).on("click", "a[href]:not([data-bypass])", function(evt) {
