@@ -1,4 +1,4 @@
-define(['backbone', 'text!./app.html', '../collections/practiceSessionCollection'], function (Backbone, template, practiceSessionCollection) {
+define(['backbone', 'text!./app.html', '../models/practiceSessionModel'], function (Backbone, template, practiceSessionModel) {
 
 	var view = Backbone.View.extend({
 		// Properties
@@ -7,7 +7,9 @@ define(['backbone', 'text!./app.html', '../collections/practiceSessionCollection
 
 		// Backbone
 		initialize: function () {
-			this.collection = new practiceSessionCollection();
+			if (!this.model) {
+				throw 'Model required you fool.';
+			}
 		},
 
 		// Bootstrap
@@ -19,13 +21,23 @@ define(['backbone', 'text!./app.html', '../collections/practiceSessionCollection
 		events: {
 		},
 
-		// Rendering
-		render: function () {
-			this.$el.html(this.template());
-			// this.stickit();
-			return this;
+		// Stickit bindings
+		bindings: {
+			'#instrument': 'instrument',
+			'.have-instrument': 'haveInstrument',
+			'#piece': 'piece',
+			'#hours': 'hours',
+			'#minutes': 'minutes'
 		},
 
+		// Rendering
+
+		render: function () {
+			this.$el.html(this.template());
+			this.stickit();
+			
+			return this;
+		},
 
 		// Backbone Events
 		// UI Events

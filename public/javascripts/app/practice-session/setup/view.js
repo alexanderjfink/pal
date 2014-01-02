@@ -1,13 +1,22 @@
-define(['backbone', 'text!./setup.html', '../collections/practiceSessionCollection'], function (Backbone, template, practiceSessionCollection) {
+define(['backbone', 'text!./setup.html', '../models/practiceSessionModel'], function (Backbone, template, practiceSessionModel) {
 
 	var view = Backbone.View.extend({
 		// Properties
 
+
 		template: _.template(template),
 
 		// Backbone
-		initialize: function () {
-			this.collection = new practiceSessionCollection();
+
+		initialize: function (options) {
+			if (!this.model) {
+				throw 'Model required you fool.'
+			}
+		},
+
+		events: {
+			'click #start-session': 'onStartSessionButtonClick',
+			'change #instrument': 'onInstrumentChange'
 		},
 
 		// Bootstrap
@@ -16,39 +25,37 @@ define(['backbone', 'text!./setup.html', '../collections/practiceSessionCollecti
 			return this.render();
 		},
 
-		events: {
-			'click #start-session': 'onStartSessionButtonClick',
-			'change #instrument': 'onInstrumentChange'
-		},
-
 		// Stickit bindings
 		bindings: {
 			'#instrument': 'instrument',
-			// '#have-instrument': 'haveInstrument',
-			// '#piece': 'piece',
-			// '#hours': 'hours',
-			// '#minutes': 'minutes',
+			'.have-instrument': 'haveInstrument',
+			'#piece': 'piece',
+			'#hours': 'hours',
+			'#minutes': 'minutes',
 		},
 
 		// Rendering
+
 		render: function () {
 			this.$el.html(this.template());
-			// this.stickit();
+			this.stickit();
+			
 			return this;
 		},
 
-
 		// Backbone Events
+
 		// UI Events
+		
 		onStartSessionButtonClick: function(e) {
-			console.log("Go go go!");
+			e.preventDefault();
+			app.router.navigate('interface', { trigger: true });
+			// TODO: SAVE MODEL
+			// this.model.save().then(function () {});
 		},
 
 		onInstrumentChange: function(e) {
-			console.log($('#instrument').val());
-			if ($('#instrument').val() != 'no-instrument') {
-				$('#have-instrument-option').toggle();
-			}
+			$('#have-instrument-option').toggle($('#instrument').val() !== 'no-instrument');
 		}
 
 		// Methods

@@ -8,7 +8,9 @@ define(['backbone'], function (Backbone) {
 		loadPage: function (page) {
 			page = page || "setup"
 			require(['app/practice-session/' + page + '/view'], function (pageView) {
-				var view = new pageView();
+				var view = new pageView({
+					model: window.app.state.practiceSession
+				});
 				view.bootstrap();
 				$('#main').html(view.$el);
 			});

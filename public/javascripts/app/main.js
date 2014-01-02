@@ -25,7 +25,7 @@ requirejs.config({
 	}
 });
 
-require(['jquery', 'stickit', 'app/practice-session/main'], function ($, app) {
+require(['jquery', 'stickit', 'app/practice-session/main'], function ($, stickit, app) {
 	window.app = app;
 
 	// This makes links hit the router instead of redirecting

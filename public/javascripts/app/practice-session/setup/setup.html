@@ -17,14 +17,14 @@
 	<div class="row hide" id="have-instrument-option">
 	    <div class="large-12 columns">
 	      <label>Do you have an instrument for this session?</label>
-	      <input type="radio" name="have-instrument" value="No" id="have-instrumentNo"><label for="have-instrumentNo">No</label>
-	      <input type="radio" name="have-instrument" value="Yes" id="have-instrumentYes"><label for="have-instrumentYes">Yes</label>
+	      <input type="radio" class="have-instrument" name="have-instrument" value="No" id="have-instrument-no"><label for="have-instrument-no">No</label>
+	      <input type="radio" class="have-instrument" name="have-instrument" value="Yes" id="have-instrument-yes"><label for="have-instrument-yes">Yes</label>
 	    </div>
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
 		  <label>What piece are you playing?</label>
-		  <select name="piece">
+		  <select id="piece">
 		    <option value="twinkle-twinkle" selected="selected">Twinkle Twinkle Little Star</option>
 		    <option value="ode-to-joy">Ode to Joy</option>
 		    <option value="solemnly-walking">Solemnly Walking</option>
@@ -36,7 +36,7 @@
 	<div class="row">
 		<div class="large-12 columns">
 		  <label>How much time do you have for this session?</label>
-		  <select name="hours" class="large-2 columns">
+		  <select id="hours" class="large-2 columns">
 		    <option value="00">00</option>
 		    <option value="01">01</option>
 		    <option value="02">02</option>
@@ -48,7 +48,7 @@
 		    <option value="08">08</option>
 		    <option value="09">09</option>
 		  </select>
-		  <select name="minutes" class="large-2 columns">
+		  <select id="minutes" class="large-2 columns">
 		  	<option value="00">00</option>
 		    <option value="15">15</option>
 		    <option value="30">30</option>
@@ -59,7 +59,7 @@
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
-			<a href="#" id="start-session" class="button">Start Session</a>
+			<button id="start-session" class="button">Start Session</button>
 		</div>
 	</div>
 </form>
