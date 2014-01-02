@@ -1,20 +1,16 @@
 doctype html
 html
 	head
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
 		title= title
 		link(rel='stylesheet', href='/stylesheets/normalize.css')
+		link(rel='stylesheet', href='/javascripts/vendor/foundation/foundation.css')
 		link(rel='stylesheet', href='/stylesheets/app.css')
+
+		script(src='/javascripts/vendor/modernizr/modernizr.js')
+		script(src='/javascripts/vendor/requirejs/require.js' data-main='/javascripts/app/main')
+
+
 	body
 		block content
-
-
-		script(src='/javascripts/vendor/requirejs/require.js')
-		script(src='/javascripts/vendor/jquery/jquery.js')
-		script(src='/javascripts/vendor/underscore/underscore.js')
-		script(src='/javascripts/vendor/backbone/backbone.js')
-		
-		//
-			script(src='/javascripts/vendor/backbone.stickit/backbone.stickit.js')
-			script(src='/javascripts/vendor/foundation/foundation.js')
-
-		script(src='/javascripts/app/main.js')

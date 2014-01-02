@@ -1,3 +1,5 @@
-npm install
-bower install
-grunt
+# Setup
+
+	npm install
+	bower install
+	grunt

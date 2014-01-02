@@ -1,4 +1,4 @@
-define(['text!./setup.html'], function (template) {
+define(['backbone','text!./setup.html'], function (Backbone, template) {
 
         var view = Backbone.View.extend({
                 // Properties
