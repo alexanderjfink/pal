@@ -8,7 +8,7 @@ requirejs.config({
 		stickit: 'backbone.stickit/backbone.stickit',
 		underscore: 'underscore/underscore',
 		fastclick: 'fastclick/fastclick',
-		foundation: 'foundation/foundation'
+		foundation: 'foundation/foundation.js'
 	},
 	shim: {
 		'backbone': {
@@ -21,13 +21,19 @@ requirejs.config({
 		},
 		'underscore': {
 				exports: '_'
-		},
-	}
+		}
+	},
+
 });
 
-require(['jquery', 'stickit', 'app/practice-session/main'], function ($, stickit, app) {
+require(['jquery', 
+		'stickit', 
+		'app/practice-session/main'], function ($, stickit, app) {
+	
 	window.app = app;
 
+	// $(document).foundation();
+	
 	// This makes links hit the router instead of redirecting
 	$(document).on("click", "a[href]:not([data-bypass])", function(evt) {
 		// Get the absolute anchor href.
@@ -48,4 +54,3 @@ require(['jquery', 'stickit', 'app/practice-session/main'], function ($, stickit
 		}
 	});
 });
-

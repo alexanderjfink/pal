@@ -51,12 +51,39 @@ module.exports = function(grunt) {
       // When parseFiles = true, matchCommunityTests = true will attempt to
       // match user-contributed tests.
       "matchCommunityTests" : false
+    },
+
+    sass: {
+      options: {
+        includePaths: ['bower_components/foundation/scss']
+      },
+      dist: {
+        options: {
+          outputStyle: 'compressed'
+        },
+        files: {
+          'public/stylesheets/app.css': 'scss/app.scss'
+        }
+      }
+    },
+
+    watch: {
+      grunt: { files: ['Gruntfile.js'] },
+
+      sass: {
+        files: 'scss/**/*.scss',
+        tasks: ['sass']
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks("grunt-modernizr");
   grunt.loadNpmTasks('grunt-bower-task');
 
   // Default task(s).
-  grunt.registerTask('default', ['bower', 'modernizr']);
+  grunt.registerTask('build', ['sass']);
+  grunt.registerTask('update', ['bower', 'modernizr', 'build']);
+  grunt.registerTask('default', ['build', 'watch']);
 };
