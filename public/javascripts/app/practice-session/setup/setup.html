@@ -1,5 +1,6 @@
 <div class="row">
 	<div class="large-12 columns">
+		<h1>PAL</h1>
 		<h3>Setup Your Practice Session</h3>
 	</div>
 </div>
@@ -7,13 +8,13 @@
 	<div class="row">
 		<div class="large-12 columns">
 		  <label>What instrument do you play?</label>
-		  <select>
-		    <option value="no-instrument">No Instrument</option>
+		  <select id="instrument">
+		    <option value="no-instrument" selected="selected">No Instrument</option>
 		    <option value="cello">Cello</option>
 		  </select>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row hide" id="have-instrument-option">
 	    <div class="large-12 columns">
 	      <label>Do you have an instrument for this session?</label>
 	      <input type="radio" name="have-instrument" value="No" id="have-instrumentNo"><label for="have-instrumentNo">No</label>
@@ -23,8 +24,8 @@
 	<div class="row">
 		<div class="large-12 columns">
 		  <label>What piece are you playing?</label>
-		  <select>
-		    <option value="twinkle-twinkle">Twinkle Twinkle Little Star</option>
+		  <select name="piece">
+		    <option value="twinkle-twinkle" selected="selected">Twinkle Twinkle Little Star</option>
 		    <option value="ode-to-joy">Ode to Joy</option>
 		    <option value="solemnly-walking">Solemnly Walking</option>
 		    <option value="pictures">Pictures</option>
@@ -35,7 +36,7 @@
 	<div class="row">
 		<div class="large-12 columns">
 		  <label>How much time do you have for this session?</label>
-		  <select class="large-2 columns">
+		  <select name="hours" class="large-2 columns">
 		    <option value="00">00</option>
 		    <option value="01">01</option>
 		    <option value="02">02</option>
@@ -47,7 +48,7 @@
 		    <option value="08">08</option>
 		    <option value="09">09</option>
 		  </select>
-		  <select class="large-2 columns">
+		  <select name="minutes" class="large-2 columns">
 		  	<option value="00">00</option>
 		    <option value="15">15</option>
 		    <option value="30">30</option>
@@ -58,7 +59,7 @@
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
-			<a href="#" class="button">Start Session</a>
+			<a href="#" id="start-session" class="button">Start Session</a>
 		</div>
 	</div>
 </form>

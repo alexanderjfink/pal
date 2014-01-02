@@ -2,7 +2,7 @@ define(['backbone'], function (Backbone) {
 	var Router = Backbone.Router.extend({
 		routes: {
 			'': 'loadPage',
-			':page': 'loadPage'
+			':page': 'loadPage',
 		},
 
 		loadPage: function (page) {
