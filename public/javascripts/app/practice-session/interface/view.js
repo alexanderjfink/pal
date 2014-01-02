@@ -1,4 +1,4 @@
-define(['backbone', 'text!./app.html', '../models/practiceSessionModel'], function (Backbone, template, practiceSessionModel) {
+define(['backbone', 'text!./app.html', '../models/practiceSessionModel', '../settings/view'], function (Backbone, template, practiceSessionModel, settingsView) {
 
 	var view = Backbone.View.extend({
 		// Properties
@@ -23,11 +23,11 @@ define(['backbone', 'text!./app.html', '../models/practiceSessionModel'], functi
 
 		// Stickit bindings
 		bindings: {
-			'#instrument': 'instrument',
+			'.instrument': 'instrument',
 			'.have-instrument': 'haveInstrument',
-			'#piece': 'piece',
-			'#hours': 'hours',
-			'#minutes': 'minutes'
+			'.piece': 'piece',
+			'.hours': 'hours',
+			'.minutes': 'minutes'
 		},
 
 		// Rendering
@@ -36,7 +36,18 @@ define(['backbone', 'text!./app.html', '../models/practiceSessionModel'], functi
 			this.$el.html(this.template());
 			this.stickit();
 			
+			// Render settings view
+			this.renderSettings();
+
 			return this;
+		},
+
+		renderSettings: function (model) {
+			var settings = new settingsView({ el: $("#settingsList") });
+			// settings.stickit();
+			settings.bootstrap();
+
+			return settings.$el;
 		},
 
 		// Backbone Events

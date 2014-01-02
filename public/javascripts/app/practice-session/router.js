@@ -12,9 +12,10 @@ define(['backbone'], function (Backbone) {
 					model: window.app.state.practiceSession
 				});
 				view.bootstrap();
+
 				$('#main').html(view.$el);
 			});
-		}
+		},
 	});
 
 	return Router;

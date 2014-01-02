@@ -1,68 +1,93 @@
 <div class="off-canvas-wrap">
-  <div class="inner-wrap">
-    <nav class="tab-bar">
-    <section class="left-small">
-      <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
-    </section>
+	<div class="inner-wrap">
+		<nav class="tab-bar">
+		<section class="left-small">
+			<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+		</section>
 
-    <section class="middle tab-bar-section">
-      <h1 class="title">PAL</h1>
-    </section>
+		<section class="middle tab-bar-section">
+			<h1 class="title">PAL</h1>
+		</section>
 
-    <section class="right-small">
-      <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
-    </section>
-    </nav>
+		<section class="right-small">
+			<a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+		</section>
+		</nav>
 
-    <aside class="left-off-canvas-menu">
-      <ul class="off-canvas-list">
-        <li><label>Your PAL</label></li>
-        <li><a href="#">Your Profile</a></li>
-        <li><a href="#" id="about">About</a></li>
-      </ul>
-    </aside>
+		<aside class="left-off-canvas-menu">
+			<ul class="off-canvas-list">
+				<li><label>Your PAL</label></li>
+				<li><a href="#">Your Profile</a></li>
+				<li><a href="#" id="about">About</a></li>
+			</ul>
+		</aside>
 
-    <aside class="right-off-canvas-menu">
-      <ul class="off-canvas-list">
-        <li><label>Practice Settings</label></li>
-      </ul>
-    </aside>
+		<aside class="right-off-canvas-menu">
+			<ul class="off-canvas-list" id="settingsList">
+			</ul>
+		</aside>
 
-    <section class="main-section">
-      <!-- content goes here -->
-      <div class="row">
-        <div class="large-11 large-centered columns">
-          <div class="flex-video"> 
-            <!-- <iframe width="560" height="315" src="//www.youtube.com/embed/6XcBlt0YzeA?rel=0" frameborder="0" allowfullscreen></iframe> -->
-          </div>
-        </div>
-      </div>
-      <div class="row">
-      <div class="small-11 small-centered columns">
-        <small class="pull-right" id="profile-container"></small>
-        <div>
-          <div id="sign-in-container"></div>
-          <div id="signed-in-container">
-            <ul class="nav nav-tabs" id="top-nav">
-              <li class="buttons">
-                <div class="btn-group">
-                  <a href="#" class="btn" id="add-list-button"><i class="icon-plus"></i></a>
-                  <a href="#" class="btn" id="edit-list-button"><i class="icon-cog"></i></a>
-                  <a href="#" class="btn delete-list" id="delete-list-button"><i class="icon-trash"></i></a>
-                  <a href="#" class="btn clear-complete"><i class="icon-ok-circle"></i> <span class="hide-tiny">Clear Complete</span></a>
-                </div>
-              </li>
-            </ul>
-            <div id="content-container">
-              <div id="list-editor"></div>
-              <div id="tasks-container"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </section>
+		<section class="main-section">
+			<!-- content goes here -->
+			<div class="row">
+				<div class="large-12 large-centered columns">
+					<div class="flex-video"> 
+						<!-- <iframe width="560" height="315" src="//www.youtube.com/embed/6XcBlt0YzeA?rel=0" frameborder="0" allowfullscreen></iframe> -->
+					</div>
+				</div>
+			</div>
+			<!--
+			<div class="row">
+				<div class="small-11 small-centered columns">
+					<small class="pull-right" id="profile-container"></small>
+					<div>
+						<div id="sign-in-container"></div>
+						<div id="signed-in-container">
+							<ul class="nav nav-tabs" id="top-nav">
+								<li class="buttons">
+									<div class="btn-group">
+										<a href="#" class="btn" id="add-list-button"><i class="icon-plus"></i></a>
+										<a href="#" class="btn" id="edit-list-button"><i class="icon-cog"></i></a>
+										<a href="#" class="btn delete-list" id="delete-list-button"><i class="icon-trash"></i></a>
+										<a href="#" class="btn clear-complete"><i class="icon-ok-circle"></i> <span class="hide-tiny">Clear Complete</span></a>
+									</div>
+								</li>
+							</ul>
+							<div id="content-container">
+								<div id="list-editor"></div>
+								<div id="tasks-container"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			-->
+			<nav class="top-bar bottom-bar" data-topbar> 
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="#" class="piece">Current Song</a></h1>
+					</li>
+					<li class="toggle-topbar menu-icon"><a href="#"></a></li>
+				</ul>
+				<section class="top-bar-section"> 
+					<!-- Right Nav Section --> 
+					<ul class="right"> 
+						<li class="divider"></li>
+						<li class="has-form">
+							<a href="#" class="button"><img src="images/icons/playback_pause_icon&16.png" alt="stop playback" /></a> 
+						</li>
+						<li class="has-form">
+							<a href="#" class="button"><img src="images/icons/playback_play_icon&16.png" alt="start playback" /></a> 
+						</li> 
+					</ul> 
+					<!-- Left Nav Section --> 
+					<ul class="left"> 
+						<li></li>
+					</ul> 
+				</section> 
+			</nav> 
+		</section>
 
-  <a class="exit-off-canvas"></a>
-  </div>
+	<a class="exit-off-canvas"></a>
+	</div>
 </div>

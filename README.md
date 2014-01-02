@@ -14,3 +14,7 @@ To watch for Sass changes:
 
 ## Run
 	$npm start
+
+
+# Licensing
+Icons CC-NonCommercial ShareAlike http://www.gentleface.com/free_icon_set.html
