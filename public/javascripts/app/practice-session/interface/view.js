@@ -43,11 +43,11 @@ define(['backbone', 'text!./app.html', '../models/practiceSessionModel', '../set
 		},
 
 		renderSettings: function (model) {
-			var settings = new settingsView({ el: $("#settingsList") });
+			var settings = new settingsView();
 			// settings.stickit();
 			settings.bootstrap();
 
-			return settings.$el;
+			return this.$('#settingsList').html(settings.$el);
 		},
 
 		// Backbone Events

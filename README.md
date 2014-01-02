@@ -10,6 +10,7 @@ You must have nodejs and npm installed for this to work
 
 ## Development
 To watch for Sass changes:
+
 	$grunt
 
 ## Run
