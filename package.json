@@ -1,0 +1,23 @@
+{
+  "name": "btask",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "requirejs": "latest",
+    "express": "3.4.4",
+    "jade": "*"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "chai": "latest",
+    "grunt": "0.4.x",
+    "grunt-exec": "0.4.x",
+    "grunt-cli": "0.1.x",
+    "grunt-modernizr": "~0.4.1",
+    "grunt-bower-task": "~0.3.4"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "grunt": "node_modules/.bin/grunt"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "pal",
+  "version": "0.0.0",
+  "homepage": "https://github.com/alexyoung/dailyjs-backbone-tutorial",
+  "authors": [
+    "Alex Fink <alexanderjfink@gmail.com>"
+  ],
+  "description": "the pal project",
+  "main": "server.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone.stickit": "~0.7.0",
+    "backbone": "~1.1.0",
+    "requirejs": "~2.1.9",
+    "jquery": "~2.0.3",
+    "foundation": "~5.0.2",
+    "underscore": "~1.5.2",
+    "requirejs-text": "~2.0.10"
+  }
+}
