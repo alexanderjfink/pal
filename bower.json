@@ -23,6 +23,7 @@
     "foundation": "zurb/bower-foundation#~5.0.2",
     "underscore": "~1.5.2",
     "requirejs-text": "~2.0.10",
-    "fastclick": "~0.6.10"
+    "fastclick": "~0.6.10",
+    "jquery.tube": "~0.2.6"
   }
 }

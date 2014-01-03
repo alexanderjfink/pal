@@ -8,7 +8,8 @@ requirejs.config({
 		stickit: 'backbone.stickit/backbone.stickit',
 		underscore: 'underscore/underscore',
 		fastclick: 'fastclick/fastclick',
-		foundation: 'foundation/foundation'
+		foundation: 'foundation/foundation',
+		tube: 'jquery.tube/jquery.tube'
 	},
 	shim: {
 		'backbone': {
@@ -32,9 +33,9 @@ require(['jquery',
 	
 	window.app = app;
 
-	// Load up foundation once page is loaded
+	// Load up foundation and jQuery.tube once page is loaded
 	setTimeout(function() {
-		require(['foundation'], function (foundation) {
+		require(['foundation', 'tube'], function (foundation) {
 			$(document).foundation();
 		});
 	});

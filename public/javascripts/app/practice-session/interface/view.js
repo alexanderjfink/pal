@@ -1,4 +1,8 @@
-define(['backbone', 'text!./app.html', '../models/practiceSessionModel', '../settings/view'], function (Backbone, template, practiceSessionModel, settingsView) {
+define(['backbone', 
+		'text!./app.html', 
+		'../models/practiceSessionModel', 
+		'../settings/view', 
+		'../viewer/view'], function (Backbone, template, practiceSessionModel, settingsView, viewerView) {
 
 	var view = Backbone.View.extend({
 		// Properties
@@ -39,16 +43,26 @@ define(['backbone', 'text!./app.html', '../models/practiceSessionModel', '../set
 			// Render settings view
 			this.renderSettings();
 
+			// Render viewer view
+			this.renderViewer();
+
 			return this;
 		},
 
-		renderSettings: function (model) {
+		renderSettings: function () {
 			var settings = new settingsView();
 			// settings.stickit();
 			settings.bootstrap();
 
-			return this.$('#settingsList').html(settings.$el);
+			return this.$('#settings-list').html(settings.$el);
 		},
+
+		renderViewer: function () {
+			var viewer = new viewerView();
+			viewer.bootstrap();
+
+			return this.$('#video-viewer').html(viewer.$el);
+		}
 
 		// Backbone Events
 		// UI Events
