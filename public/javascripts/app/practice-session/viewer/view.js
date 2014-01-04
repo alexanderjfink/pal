@@ -1,111 +1,118 @@
-define(['text!./templates/viewer.html','./collections/viewerCollection'], function (template, viewerCollection) {
+define(['text!./templates/viewer.html', '../models/videoModel', '../collections/playlistCollection', './data/videoData'], function (template, Video, Playlist, videoData) {
 
 	var ViewerView = Backbone.View.extend({
-					// Properties
+		// Properties
 
-					template: _.template(template),
+		template: _.template(template),
 
-					// Backbone
+		// Backbone
 
-					initialize: function () {
+		initialize: function () {
+			
+			// Render YouTube Player
+			$.tube.defaults = {
+				player: 'videoPlayer',
+				autoload: false, // load the player automatically?
+				autoplay: true,
+				start: 0, // start video at offset
+				order: 'relevance', // 'published', 'rating', 'viewCount'
+				author: false,
+				hide: 1, // 0 = always visible, 1 = hide progress bar and controls, 2 = hide progress bar
+				controls: 1,
+				version: 2,
+				format: 5,
+				limit: 10,
+				key: false,
+				render: true,
+				truncate: false,
+				at: '\n', // pattern (truncate)
+				max: 140, // max length (truncate)
+				omission: '…', // omission string (truncate)
+				load: false, // plugin callback when the playlist data has been loaded
+				complete: false, // plugin callback when the playlist html has been rendered
+				click: false // plugin callback
+			};
 
-						this.collection = new viewerCollection();
-						
-						// Render YouTube Player
-						$.tube.defaults = {
-							player: 'videoPlayer',
-							autoload: false, // load the player automatically?
-							autoplay: true,
-							start: 0, // start video at offset
-							order: 'relevance', // 'published', 'rating', 'viewCount'
-							author: false,
-							hide: 1, // 0 = always visible, 1 = hide progress bar and controls, 2 = hide progress bar
-							controls: 1,
-							version: 2,
-							format: 5,
-							limit: 10,
-							key: false,
-							render: true,
-							truncate: false,
-							at: '\n', // pattern (truncate)
-							max: 140, // max length (truncate)
-							omission: '…', // omission string (truncate)
-							load: false, // plugin callback when the playlist data has been loaded
-							complete: false, // plugin callback when the playlist html has been rendered
-							click: false // plugin callback
-						};
+			$.player.defaults = {
+				width: $(window).width()
+			};
 
-						$.player.defaults = {
-							width: $(window).width()
-						};
-					},
+			// TEMPORARY
+			// Temporarily assembles playlist
+			this.playlist = new Playlist();
 
-					events: {
-						'click #start-playback': 'onPlayButtonClick',
-						'click #pause-playback': 'onPauseButtonClick'
-					},
+			for (var i = 0; i < videoData.length; i++) {
+				this.playlist.add(new Video(videoData[i]));
+			}
 
-					// Bootstrap
+			var nohands = this.playlist.where({medium: "No Instrument: Fingers"});
+			// END TEMPORARY
+		},
 
-					bootstrap: function () {
-						this.render();
-					},
+		events: {
+			'click #start-playback': 'onPlayButtonClick',
+			'click #pause-playback': 'onPauseButtonClick'
+		},
 
-					// Rendering
+		// Bootstrap
 
-					render: function () {								
-						this.$el.html(this.template());
+		bootstrap: function () {
+			this.render();
+		},
 
-						// Don't try to load video until DOM is rendered.
-						_.defer(this.initVideo);
+		// Rendering
 
-						alert(this.collection.getVideos({"level": "Beginner"}));
-					},
+		render: function () {								
+			this.$el.html(this.template());
 
-					// UI Events
+			// Don't try to load video until DOM is rendered.
+			_.defer(this.initVideo);
+		},
 
-					onPlayButtonClick: function (e) {
-						e.preventDefault();
+		// UI Events
 
-						var player = this.$('#player-container').data('player');
-						player.p.play();
-					},
+		onPlayButtonClick: function (e) {
+			e.preventDefault();
 
-					onPauseButtonClick: function (e) {
-						e.preventDefault();
+			var player = this.$('#player-container').data('player');
+			player.p.play();
+		},
 
-						var player = $('#player-container').data('player');
-						player.p.stop();
-					},
+		onPauseButtonClick: function (e) {
+			e.preventDefault();
 
-					// Backbone Events
+			var player = $('#player-container').data('player');
+			player.p.stop();
+		},
 
-					// Methods
-					initVideo: function() {
-						$('#player-container').player({
-							video: 'ylLzyHk54Z0',
-							events: {
-								play: (function () {
-								}),
-								stop: (function () {
+		// Backbone Events
 
-								}),
-							 	end: (function () {
-							 		// switch between the player and the info container
-							 		var hideoptions = {  "direction" : "left",  "mode" : "hide"};
-									var showoptions = {"direction" : "right","mode" : "show"};
+		// Methods
+		initVideo: function() {
+			$('#player-container').player({
+				video: 'ylLzyHk54Z0',
+				events: {
+					play: (function () {
+					}),
+					stop: (function () {
 
-							 		$('#player-container').effect('slide', hideoptions, 1000);
-							 		$('#info-container').effect('slide', showoptions, 1000);
-							 		// repopulate the other with the next data
-							 	})
-							}
-						});
-					},
+					}),
+				 	end: (function () {
+				 		// switch between the player and the info container
+				 		var hideoptions = {  "direction" : "left",  "mode" : "hide"};
+						var showoptions = {"direction" : "right","mode" : "show"};
 
-					switchPlayerAndInfo: function () {
-						console.log("Here");
-					}
+				 		$('#player-container').effect('slide', hideoptions, 1000);
+				 		$('#info-container').effect('slide', showoptions, 1000);
+				 		// repopulate the other with the next data
+				 	})
+				}
+			});
+		},
+
+		switchPlayerAndInfo: function () {
+			console.log("Here");
+		}
 
 
 	});
