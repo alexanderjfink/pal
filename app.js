@@ -8,7 +8,6 @@ var routes = require('./app/routes');
 var user = require('./app/routes/user');
 var http = require('http');
 var path = require('path');
-
 var app = express();
 
 // all environments
@@ -21,7 +20,6 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only

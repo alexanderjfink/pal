@@ -10,8 +10,7 @@ requirejs.config({
 		fastclick: 'fastclick/fastclick',
 		foundation: 'foundation/foundation',
 		moment: 'momentjs/moment',
-		jQueryUI: 'jquery-ui/jquery-ui',
-		async: 'requirejs-plugins/async',
+		jQueryUI: 'jquery-ui/jquery-ui'
 	},
 	shim: {
 		'backbone': {
