@@ -1,5 +1,44 @@
 <div class="flex-video"> 
-	<div id="player-container"></div>
+	<div id="player-container">
+		<div id="player"></div>
+		<script>
+			// 2. This code loads the IFrame Player API code asynchronously.
+			var tag = document.createElement('script');
+
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			// 3. This function creates an <iframe> (and YouTube player)
+			//    after the API code downloads.
+			var player, 
+					currentVideoIndex = 0;
+
+
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player('player', {
+					height: '390',
+					width: '640',
+					videoId: window.app.playlist[currentVideoIndex].id,
+					events: {
+						'onReady': onPlayerReady,
+						'onStateChange': onPlayerStateChange
+					}
+				});
+			}
+
+			function onPlayerReady() {
+			}
+
+			function onPlayerStateChange() {
+				if (YT.PlayerState.ENDED) {
+					currentVideoIndex++;
+					player.cueVideoById(window.app.playlist[currentVideoIndex].id);
+					player.playVideo();
+				}
+			}
+		</script>
+	</div>
 	<div id="info-container" class="hide">
 		<div class="row">
 			<div class="large-8 large-centered columns">
@@ -21,10 +60,8 @@
 			<ul class="right"> 
 				<li class="divider"></li>
 				<li class="has-form">
-					<button class="button" id="pause-playback"><img src="images/icons/playback_pause_icon&16.png" alt="pause playback" /></a> 
-				</li>
-				<li class="has-form">
-					<button class="button" id="start-playback"><img src="images/icons/playback_play_icon&16.png" alt="start playback" /></a> 
+					<button class="button" id="pause-playback"><img src="images/icons/playback_pause_icon&16.png" alt="pause playback" /></button> 
+					<button class="button" id="start-playback"><img src="images/icons/playback_play_icon&16.png" alt="start playback" /></button> 
 				</li> 
 			</ul> 
 			<!-- Left Nav Section --> 

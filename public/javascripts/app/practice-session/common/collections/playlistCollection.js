@@ -19,7 +19,7 @@ define(['../models/videoModel', 'moment'], function (VideoModel, moment) {
 		generate: function(params) {
 			// based on a set of paramters {}, generate a playlist that is less than the duration
 
-			var list = {}, finalList = {};
+			var list = {}, finalList = [];
 			var playlistDuration = moment.duration(params.duration || "00:05:00");
 
 			list = this.search(params);
@@ -41,7 +41,7 @@ define(['../models/videoModel', 'moment'], function (VideoModel, moment) {
 					var tempDur = listDuration; // temporary duration so we can add for comparison
 					if (tempDur.add(videoDuration) < playlistDuration) {
 						listDuration.add(videoDuration); // this worked, so lets really add it
-						finalList[video.id] = video; // add the video
+						finalList.push(video); // add the video
 					}
 				}
 			});

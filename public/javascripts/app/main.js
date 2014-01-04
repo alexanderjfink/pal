@@ -10,8 +10,8 @@ requirejs.config({
 		fastclick: 'fastclick/fastclick',
 		foundation: 'foundation/foundation',
 		moment: 'momentjs/moment',
-		tube: 'jquery.tube/jquery.tube',
-		jQueryUI: 'jquery-ui/jquery-ui'
+		jQueryUI: 'jquery-ui/jquery-ui',
+		async: 'requirejs-plugins/async',
 	},
 	shim: {
 		'backbone': {
@@ -40,9 +40,9 @@ require(['jquery',
 	
 	window.app = app;
 
-	// Load up foundation and jQuery.tube once page is loaded
+	// Load up foundation once page is loaded
 	setTimeout(function() {
-		require(['foundation', 'tube'], function (foundation) {
+		require(['foundation'], function (foundation) {
 			$(document).foundation();
 		});
 	});
