@@ -62,7 +62,7 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'public/stylesheets/app.css': 'scss/app.scss'
+          'public/stylesheets/app.css': 'public/stylesheets/sass/app.scss'
         }
       }
     },
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       sass: {
-        files: 'scss/**/*.scss',
+        files: 'public/stylesheets/sass/**/*.scss',
         tasks: ['sass']
       }
     }
@@ -84,6 +84,7 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('build', ['sass']);
-  grunt.registerTask('update', ['bower', 'modernizr', 'build']);
-  grunt.registerTask('default', ['build', 'watch']);
+  
+  grunt.registerTask('default', ['bower', 'modernizr', 'build']);
+  grunt.registerTask('watch', ['build', 'watch']);
 };

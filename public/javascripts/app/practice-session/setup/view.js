@@ -1,4 +1,4 @@
-define(['backbone', 'text!./setup.html', '../models/practiceSessionModel'], function (Backbone, template, practiceSessionModel) {
+define(['backbone', 'text!./setup.html', '../common/models/practiceSessionModel'], function (Backbone, template, practiceSessionModel) {
 
 	var view = Backbone.View.extend({
 		// Properties

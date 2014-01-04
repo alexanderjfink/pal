@@ -1,4 +1,4 @@
-define(['./router', './models/practiceSessionModel'], function (Router, PracticeSessionModel) {
+define(['./router', './common/models/practiceSessionModel'], function (Router, PracticeSessionModel) {
 	var app = {};
 	
     app.router = new Router();

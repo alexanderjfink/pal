@@ -1,4 +1,4 @@
-define(['text!./templates/viewer.html', '../models/videoModel', '../collections/playlistCollection', './data/videoData'], function (template, Video, Playlist, videoData) {
+define(['text!./templates/viewer.html', '../common/models/videoModel', '../common/collections/playlistCollection', './data/videoData'], function (template, Video, Playlist, videoData) {
 
 	var ViewerView = Backbone.View.extend({
 		// Properties
@@ -44,7 +44,7 @@ define(['text!./templates/viewer.html', '../models/videoModel', '../collections/
 			for (var i = 0; i < videoData.length; i++) {
 				this.playlist.add(new Video(videoData[i]));
 			}
-			
+
 			var theList = this.playlist.generate({medium: "No Instrument: Fingers", duration: "00:15:00"});
 			// END TEMPORARY
 		},

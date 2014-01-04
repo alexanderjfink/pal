@@ -2,22 +2,22 @@
   "name": "pal",
   "version": "0.0.1",
   "private": true,
+  "author": "Alex Fink <alexanderjfink@gmail.com> (http://github.com/alexanderjfink)",
   "dependencies": {
     "requirejs": "latest",
     "express": "3.4.4",
+    "mongoose": "latest",
     "jade": "*"
   },
   "devDependencies": {
     "mocha": "latest",
     "chai": "latest",
+    "node-sass": "latest",
     "grunt": "0.4.x",
     "grunt-exec": "0.4.x",
     "grunt-cli": "0.1.x",
     "grunt-modernizr": "~0.4.1",
-    "grunt-bower-task": "~0.3.4",
-    "node-sass": "~0.7.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-sass": "~0.8.0"
+    "grunt-bower-task": "~0.3.4"
   },
   "scripts": {
     "start": "node app.js",

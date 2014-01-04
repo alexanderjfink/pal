@@ -6,16 +6,16 @@ You must have nodejs and npm installed for this to work
 	$npm install -g grunt-cli
 
 ## Setup
-	$npm install && bower install && foundation update && grunt update
+	$npm install && bower install && foundation update && grunt
 
 ## Development
 To watch for Sass changes:
 
-	$grunt
+	$grunt watch
 
 ## Run
 	$npm start
 
 
 # Licensing
-Icons CC-NonCommercial ShareAlike http://www.gentleface.com/free_icon_set.html
+[Icons CC-NonCommercial ShareAlike](http://www.gentleface.com/free_icon_set.html "Iconset Link")
