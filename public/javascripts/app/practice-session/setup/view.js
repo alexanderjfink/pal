@@ -1,6 +1,6 @@
-define(['backbone', 'text!./setup.html', '../common/models/practiceSessionModel'], function (Backbone, template, practiceSessionModel) {
+define(['backbone', 'text!./setup.html'], function (Backbone, template) {
 
-	var view = Backbone.View.extend({
+	var SetupView = Backbone.View.extend({
 		// Properties
 
 
@@ -61,6 +61,6 @@ define(['backbone', 'text!./setup.html', '../common/models/practiceSessionModel'
 		// Methods
 	});
 
-	return view;
+	return SetupView;
 
 });

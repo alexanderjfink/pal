@@ -3,7 +3,7 @@ define(['backbone',
 		'../settings/view', 
 		'../viewer/view'], function (Backbone, template, SettingsView, ViewerView) {
 
-	var view = Backbone.View.extend({
+	var InterfaceView = Backbone.View.extend({
 		// Properties
 
 		template: _.template(template),
@@ -75,6 +75,6 @@ define(['backbone',
 		// Methods
 	});
 
-	return view;
+	return InterfaceView;
 
 });

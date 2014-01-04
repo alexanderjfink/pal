@@ -1,5 +1,5 @@
 define(['backbone'], function () {
-	var practiceSessionModel = Backbone.Model.extend({
+	var PracticeSessionModel = Backbone.Model.extend({
 			// Properties
 
 			// Backbone
@@ -10,5 +10,5 @@ define(['backbone'], function () {
 
 	});
 
-	return practiceSessionModel;
+	return PracticeSessionModel;
 });

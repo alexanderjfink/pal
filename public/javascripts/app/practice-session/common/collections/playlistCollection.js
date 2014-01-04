@@ -1,12 +1,12 @@
-define(['../models/videoModel', 'moment'], function (Video, moment) {
+define(['../models/videoModel', 'moment'], function (VideoModel, moment) {
 
-	var Playlist = Backbone.Collection.extend({
+	var PlaylistCollection = Backbone.Collection.extend({
 		// Properties
 
 		// Backbone
 
 		// Be sure to set the model _type_ and not an instance of it
-		model: Video,
+		model: VideoModel,
 
 		// Set the URL here so you can fetch on the collection and hit a list endpoint.
 		// Note it's not baseUrl because collections don't have IDs.
@@ -51,5 +51,5 @@ define(['../models/videoModel', 'moment'], function (Video, moment) {
 
 	});
 
-	return Playlist;
+	return PlaylistCollection;
 });

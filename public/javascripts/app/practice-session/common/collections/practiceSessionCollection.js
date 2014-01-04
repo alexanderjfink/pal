@@ -1,11 +1,11 @@
-define(['../models/practiceSessionModel'], function (practiceSessionModel) {
-	var practiceSessionCollection = Backbone.Collection.extend({
+define(['../models/practiceSessionModel'], function (PracticeSessionModel) {
+	var PracticeSessionCollection = Backbone.Collection.extend({
 		// Properties
 
 		// Backbone
 
 		// Be sure to set the model _type_ and not an instance of it
-		model: practiceSessionModel,
+		model: PracticeSessionModel,
 
 		// Set the URL here so you can fetch on the collection and hit a list endpoint.
 		// Note it's not baseUrl because collections don't have IDs.
@@ -16,5 +16,5 @@ define(['../models/practiceSessionModel'], function (practiceSessionModel) {
 		}
 	});
 
-	return practiceSessionCollection;
+	return PracticeSessionCollection;
 });
