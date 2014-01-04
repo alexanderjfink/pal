@@ -25,6 +25,7 @@
     "requirejs-text": "~2.0.10",
     "fastclick": "~0.6.10",
     "jquery.tube": "~0.2.6",
-    "jquery-ui": "~1.10.3"
+    "jquery-ui": "~1.10.3",
+    "momentjs": "~2.5.0"
   }
 }

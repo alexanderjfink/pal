@@ -9,6 +9,7 @@ requirejs.config({
 		underscore: 'underscore/underscore',
 		fastclick: 'fastclick/fastclick',
 		foundation: 'foundation/foundation',
+		moment: 'momentjs/moment',
 		tube: 'jquery.tube/jquery.tube',
 		jQueryUI: 'jquery-ui/jquery-ui'
 	},

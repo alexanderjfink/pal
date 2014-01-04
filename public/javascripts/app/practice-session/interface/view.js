@@ -29,7 +29,6 @@ define(['backbone',
 			'.instrument': 'instrument',
 			'.have-instrument': 'haveInstrument',
 			'.piece': 'piece',
-			'.hours': 'hours',
 			'.minutes': 'minutes'
 		},
 

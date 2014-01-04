@@ -44,8 +44,8 @@ define(['text!./templates/viewer.html', '../models/videoModel', '../collections/
 			for (var i = 0; i < videoData.length; i++) {
 				this.playlist.add(new Video(videoData[i]));
 			}
-
-			var nohands = this.playlist.where({medium: "No Instrument: Fingers"});
+			
+			var theList = this.playlist.generate({medium: "No Instrument: Fingers", duration: "00:15:00"});
 			// END TEMPORARY
 		},
 
