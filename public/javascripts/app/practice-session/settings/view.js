@@ -1,6 +1,6 @@
 define(['text!./settings.html'], function (template) {
 
-	var settingsView = Backbone.View.extend({
+	var SettingsView = Backbone.View.extend({
 			// Properties
 
 			template: _.template(template),
@@ -32,6 +32,6 @@ define(['text!./settings.html'], function (template) {
 			// Methods
 	});
 
-	return settingsView;
+	return SettingsView;
 
 });

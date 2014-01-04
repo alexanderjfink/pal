@@ -24,6 +24,7 @@
     "underscore": "~1.5.2",
     "requirejs-text": "~2.0.10",
     "fastclick": "~0.6.10",
-    "jquery.tube": "~0.2.6"
+    "jquery.tube": "~0.2.6",
+    "jquery-ui": "~1.10.3"
   }
 }

@@ -9,7 +9,8 @@ requirejs.config({
 		underscore: 'underscore/underscore',
 		fastclick: 'fastclick/fastclick',
 		foundation: 'foundation/foundation',
-		tube: 'jquery.tube/jquery.tube'
+		tube: 'jquery.tube/jquery.tube',
+		jQueryUI: 'jquery-ui/jquery-ui'
 	},
 	shim: {
 		'backbone': {
@@ -22,14 +23,19 @@ requirejs.config({
 		},
 		'underscore': {
 				exports: '_'
+		},
+		'jQueryUI': {
+			export:"$",
+			deps: ['jquery']
 		}
 	},
 
 });
 
 require(['jquery', 
+		'jQueryUI',
 		'stickit', 
-		'app/practice-session/main'], function ($, stickit, app) {
+		'app/practice-session/main'], function ($, jQueryUI, stickit, app) {
 	
 	window.app = app;
 

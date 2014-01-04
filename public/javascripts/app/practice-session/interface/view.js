@@ -1,8 +1,7 @@
 define(['backbone', 
 		'text!./app.html', 
-		'../models/practiceSessionModel', 
 		'../settings/view', 
-		'../viewer/view'], function (Backbone, template, practiceSessionModel, settingsView, viewerView) {
+		'../viewer/view'], function (Backbone, template, SettingsView, ViewerView) {
 
 	var view = Backbone.View.extend({
 		// Properties
@@ -50,7 +49,7 @@ define(['backbone',
 		},
 
 		renderSettings: function () {
-			var settings = new settingsView();
+			var settings = new SettingsView();
 			// settings.stickit();
 			settings.bootstrap();
 
@@ -58,10 +57,17 @@ define(['backbone',
 		},
 
 		renderViewer: function () {
-			var viewer = new viewerView();
+			var viewer = new ViewerView();
 			viewer.bootstrap();
 
 			return this.$('#video-viewer').html(viewer.$el);
+
+			// var videoView = new VideoView({
+			// 	'el': $('.video'),
+			// 	'parentView': this,
+			// 	'id': 'ylLzyHk54Z0',
+			// 	'title': 'My Video'
+			// });
 		}
 
 		// Backbone Events
