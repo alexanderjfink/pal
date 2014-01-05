@@ -30,8 +30,7 @@ define(['backbone', 'text!./setup.html'], function (Backbone, template) {
 			'#instrument': 'instrument',
 			'.have-instrument': 'haveInstrument',
 			'#piece': 'piece',
-			'#hours': 'hours',
-			'#minutes': 'minutes',
+			'#minutes': 'minutes'
 		},
 
 		// Rendering

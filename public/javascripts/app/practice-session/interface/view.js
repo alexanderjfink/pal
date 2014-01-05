@@ -56,7 +56,7 @@ define(['backbone',
 		},
 
 		renderViewer: function () {
-			var viewer = new ViewerView();
+			var viewer = new ViewerView({model: this.model});
 			viewer.bootstrap();
 
 			return this.$('#video-viewer').html(viewer.$el);
