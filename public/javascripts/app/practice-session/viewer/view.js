@@ -19,7 +19,11 @@ define(['text!./templates/viewer.html',
 				this.playlist.add(new VideoModel(videoData[i]));
 			}
 
-			window.app.playlist = this.playlist.generate({medium: this.model.instrument, piece: this.model.piece, duration: this.model.minutes});
+			window.app.playlist = this.playlist.generate({	
+															medium: this.model.get('instrument'), 
+															piece: this.model.get('piece'), 
+															duration: this.model.get('minutes')
+														});
 			
 		},
 

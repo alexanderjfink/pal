@@ -22,7 +22,7 @@ define(['../models/videoModel', 'moment'], function (VideoModel, moment) {
 			var list = {}, finalList = [];
 			var playlistDuration = moment.duration(params.duration || "00:05:00");
 
-			list = this.search(params);
+			list = this.search({'instrument': params.instrument, 'piece': params.piece});
 
 			// shuffle list for random playlist
 			list = _.shuffle(list);
@@ -30,7 +30,7 @@ define(['../models/videoModel', 'moment'], function (VideoModel, moment) {
 			// select for maximum duration using the wonders that are MomentJS
 
 			var listDuration = moment.duration("00:00:00"); // total duration of the list so far
-			list = _.each(this.models, function (video) {
+			list = _.each(list, function (video) {
 				// if item has a duration (it should or we won't bother with it) AND the current item in addition to the rest of 
 				// the items is LESS than the total duration we want for this session, add the video to the final list
 				var videoDuration = video.get('duration');
