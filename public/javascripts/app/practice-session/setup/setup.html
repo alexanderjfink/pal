@@ -9,23 +9,25 @@
 		<div class="large-12 columns">
 		  <label>What instrument do you play?</label>
 			<select id="instrument">
-				<option value="no-instrument" selected="selected">No Instrument</option>
+				<option value="" selected="selected">Choose an instrument</option>
+				<option value="no-instrument">Voice/Body</option>
 				<option value="cello">Cello</option>
 			</select>
 		</div>
 	</div>
 	<div class="row hide" id="have-instrument-option">
 		<div class="large-12 columns">
-		  <label>Do you have an instrument for this session?</label>
-		  <input type="radio" class="have-instrument" name="have-instrument" value="No" id="have-instrument-no"><label for="have-instrument-no">No</label>
+		  <label>Do you have a Cello for this session?</label>
 		  <input type="radio" class="have-instrument" name="have-instrument" value="Yes" id="have-instrument-yes"><label for="have-instrument-yes">Yes</label>
+		  <input type="radio" class="have-instrument" name="have-instrument" value="No" id="have-instrument-no"><label for="have-instrument-no">No</label>
 		</div>
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
-		  <label>What piece are you playing?</label>
+		  <label>Music</label>
 		  <select id="piece">
-			<option value="Twinkle Twinkle Little Star" selected="selected">Twinkle Twinkle Little Star</option>
+		  	<option value="" selected="selected">Choose a song</option>
+			<option value="Twinkle Twinkle Little Star">Twinkle Twinkle Little Star</option>
 			<option value="Ode to Joy">Ode to Joy</option>
 			<option value="Solemnly Walking">Solemnly Walking</option>
 			<option value="Pictures">Pictures</option>
@@ -35,14 +37,15 @@
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
-		  <label>How many minutes do you have for this session?</label>
+		  <label>Session Length?</label>
 		  <select id="minutes" class="large-2 columns">
-			<option value="05">05</option>
-			<option value="15">15</option>
-			<option value="30">30</option>
-			<option value="45">45</option>
+		  	<option value="Min">Select Minutes</option>
+			<option value="05">05 Minutes</option>
+			<option value="15">15 Minutes</option>
+			<option value="30">30 Minutes</option>
+			<option value="45">45 Minutes</option>
 		  </select>
-		  <div class="large-8 columns"></div>
+		  <div class="large-10 columns"></div>
 		</div>
 	</div>
 	<div class="row">
