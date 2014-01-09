@@ -1,115 +1,22 @@
 define([], function () {
 	videoData = [
-		{	
-			"id": "12PZVGm6Fd8",	
-			"duration": "00:01:39",	
-			"piece": "Twinkle Twinkle Little Star",	
-			"key": "D Major",	
-			"medium": "No Instrument (Cello): Fingers",	
-			"approach": "Counting",
-			"teacherSex": "Male",	
-			"level": "Beginner"		
-		},
-		{
-			"id": "xWca3U3fNIg",	
-			"duration": "00:01:24",	
-			"piece": "Twinkle Twinkle Little Star",	
-			"key": "D Major",	
-			"medium": "No Instrument: Fingers",	
-			"approach": "Singing Words (English)",	
-			"teacherSex": "Male",
-			"level": "Beginner"		
-		},
-		{
-			"id": "aZbHwgsXO3g",	
-			"duration": "00:01:31",	
-			"piece": "Twinkle Twinkle Little Star",	
-			"key": "D Major",	
-			"medium": "No Instrument: Fingers",	
-			"approach": "Singing Words (English)",
-			"teacherSex": "Male",	
-			"level": "Beginner"		
-		},
-		{
-			"id": "RfBRJHiw81o",	
-			"duration": "00:01:44",	
-			"piece": "Twinkle Twinkle Little Star",	
-			"key": "D Major",	
-			"medium": "No Instrument: Pencil",	
-			"approach": "Counting",	
-			"teacherSex": "Male",	
-			"level": "Beginner"		
-		},
 		{
 			"id": "L7tIdzYejDs",	
 			"duration": "00:01:30",	
 			"piece": "Twinkle Twinkle Little Star",	
 			"key": "D Major",	
-			"medium": "No Instrument: Pencil",	
+			"medium": "Body: Pencil",	
 			"approach": "Singing Words (English)",
 			"teacherSex": "Male",	
 			"level": "Beginner"
-		},
-		{
-			"id": "sceL8oXxUx8",
-			"duration": "00:02:08",
-			"piece": "Twinkle Twinkle Little Star",
-			"key": "D Major",	
-			"medium": "No Instrument: Pencil",
-			"approach": "Counting",	
-			"teacherSex": "Male",	
-			"level": "Beginner"		
-		},
-		{
-			"id": "o_nfpw9OLfA",	
-			"duration": "00:01:37",	
-			"piece": "Twinkle Twinkle Little Star",	
-			"key": "D Major",	
-			"medium": "No Instrument: Pencil",	
-			"approach": "Singing Words (English)",
-			"teacherSex": "Male",	
-			"level": "Beginner"		
 		},
 		{
 			"id": "LXYn1WPqAWo",	
 			"duration": "00:01:20",	
 			"piece": "Random",	
 			"key": "D Minor",
-			"medium": "No Instrument: Fingers",
+			"medium": "Body: Fingers",
 			"approach": "Singing Random",
-			"teacherSex": "Male",	
-			"level": "Beginner",	
-			"tags": ["For Children"]
-		},
-		{
-			"id": "cXiclnddeiU",	
-			"duration": "00:01:00",	
-			"piece": "Random",	
-			"key": "D Major",	
-			"medium": "No Instrument: Pencil",	
-			"approach": "Singing Random",	
-			"teacherSex": "Male",	
-			"level": "Beginner",	
-			"tags": ["For Children"]
-		},
-		{
-			"id": "nJbm8zz1RyA",	
-			"duration": "00:01:23",	
-			"piece": "Twinkle Twinkle Little Star",	
-			"key": "D Major",	
-			"medium": "No Instrument: Pencil",	
-			"approach": "Singing Words (English)",
-			"teacherSex": "Male",	
-			"level": "Beginner",	
-			"tags": ["For Children"]
-		},
-		{
-			"id": "GupjUgfKwW4",	
-			"duration": "00:01:18",	
-			"piece": "Random",	
-			"key": "D Major",	
-			"medium": "No Instrument: Fingers",	
-			"approach": "Singing Fingerings",	
 			"teacherSex": "Male",	
 			"level": "Beginner",	
 			"tags": ["For Children"]
@@ -117,9 +24,9 @@ define([], function () {
 		{
 			"id": "gdvci0FDeuo",	
 			"duration": "00:00:44",
-			"piece": "Scale",	
+			"piece": "Technique: Scale",	
 			"key": "D Major",	
-			"medium": "No Instrument: Fingers",	
+			"medium": "Body: Fingers",	
 			"approach": "Singing Fingerings",	
 			"teacherSex": "Male",	
 			"level": "Beginner",	
@@ -128,56 +35,19 @@ define([], function () {
 		{
 			"id": "7mgctuOigu4",	
 			"duration": "00:01:07",	
-			"piece": "Random",	
+			"piece": "Technique: Random",	
 			"key": "D Major",	
-			"medium": "No Instrument: Pencil",	
+			"medium": "Body: Pencil",	
 			"approach": "Singing Random (English)",	
 			"teacherSex": "Male",	
 			"level": "Beginner",	
 			"tags": ["For Children"]
 		},
 		{
-			"id": "lzdNMBgVK8w",	
-			"duration": "00:01:00",	
-			"piece": "Vocal Warmup",	
-			"medium": "Voice",
-			"approach": "Singing",	
-			"teacherSex": "Male",	
-			"level": "Beginner"		
-		},
-		{
-			"id": "qskbmncRbHI",	
-			"duration": "00:01:10",	
-			"piece": "Vocal Warmup",	
-			"medium": "Voice",
-			"approach": "Singing",	
-			"teacherSex": "Male",	
-			"level": "Beginner"		
-		},
-		{
-			"id": "kmxhUL2inEY",	
-			"duration": "00:01:18",	
-			"piece": "Vocal Warmup",	
-			"medium": "Voice",
-			"approach": "Singing",	
-			"teacherSex": "Male",	
-			"level": "Beginner"		
-		},
-		{
-			"id": "vEAItBPQ1_g",	
-			"duration": "00:01:07",	
-			"piece": "Random",	
-			"key": "D Major",	
-			"medium": "Voice",
-			"approach": "Singing",	
-			"teacherSex": "Male",	
-			"level": "Beginner"		
-		},
-		{
 			"id": "RQKSpsXGv6s",	
 			"duration": "00:01:01",	
-			"piece": "Vocal Warmup",	
-			"medium": "Voice",
+			"piece": "Warmup: Voice",	
+			"medium": "Body: Voice",
 			"approach": "Singing",	
 			"teacherSex": "Male",	
 			"level": "Beginner"		
@@ -185,17 +55,8 @@ define([], function () {
 		{
 			"id": "WLSqM7SYawM",	
 			"duration": "00:01:07",	
-			"piece": "Vocal Warmup",	
-			"medium": "Voice",
-			"approach": "Singing",	
-			"teacherSex": "Male",	
-			"level": "Beginner"		
-		},
-		{
-			"id": "ccMf_AsaVu8",	
-			"duration": "00:00:51",
-			"piece": "Random",
-			"medium": "Voice",
+			"piece": "Warmup: Voice",	
+			"medium": "Body: Voice",
 			"approach": "Singing",	
 			"teacherSex": "Male",	
 			"level": "Beginner"		
@@ -205,7 +66,7 @@ define([], function () {
 			"duration": "00:02:11",
 			"piece": "Twinkle Twinkle Little Star",
 			"key": "D Major",	
-			"medium": "Voice",
+			"medium": "Body: Voice",
 			"approach": "Singing Solfege",	
 			"teacherSex": "Male",	
 			"level": "Beginner"		
@@ -215,113 +76,27 @@ define([], function () {
 			"duration": "00:01:10",	
 			"piece": "Open Strings",	
 			"key": "D Major",	
-			"medium": "Cello",
+			"medium": "Cello: Pizzicato",
 			"approach": "Singing Note Names",	
 			"teacherSex": "Male",	
-			"level": "Beginner",		
-			"tags": ["Pizzicato"]
-		},
-		{
-			"id": "BsvDwOF5lWU",	
-			"duration": "00:01:07",	
-			"piece": "Open Strings",	
-			"key": "D Major",	
-			"medium": "Cello",
-			"approach": "Singing Note Names",	
-			"teacherSex": "Male",	
-			"level": "Beginner",		
-			"tags": ["Pizzicato"]
-		},
-		{
-			"id": "hkTb-zrOG6k",	
-			"duration": "00:01:13",	
-			"piece": "Open Strings",	
-			"key": "D Major",	
-			"medium": "Cello",
-			"approach": "Singing Note Colors",	
-			"teacherSex": "Male",	
-			"level": "Beginner",		
-			"tags": ["Pizzicato"]
+			"level": "Beginner"
 		},
 		{
 			"id": "Vnqe2-nGqT8",	
 			"duration": "00:01:39",	
 			"piece": "Twinkle Twinkle Little Star",	
-			"medium": "Voice",
+			"medium": "Body: Voice",
 			"approach": "Singing Fingerings",
 			"teacherSex": "Male",	
 			"level": "Beginner",	
 			"tags": ["For Children", "Finger Goggles"]
 		},
 		{
-			"id": "3rIfznNUygM",	
-			"duration": "00:01:02",	
-			"piece": "Open Strings",	
-			"key": "D Major",	
-			"medium": "Cello",
-			"approach": "Singing Note Names",	
-			"teacherSex": "Male",	
-			"level": "Beginner",	
-			"tags": ["Left Hand Technique", "Pizzicato"]
-		},
-		{
-			"id": "d2HxUwQFXi0",
-			"duration": "00:00:45",
-			"piece": "Random",
-			"medium": "Cello",
-			"approach": "Counting",	
-			"teacherSex": "Male",	
-			"level": "Beginner",	
-			"tags": ["Shifting","Pizzicato"]
-		},
-		{
-			"id": "1EjuY5Xf25g",
-			"duration": "00:02:08",
-			"piece": "Open Strings",
-			"medium": "Cello",
-			"approach": "Counting",	
-			"teacherSex": "Male",	
-			"level": "Beginner",	
-			"tags": ["Left Hand Technique","Pizzicato"]
-		},
-		{
-			"id": "b5RegnRxBgI",
-			"duration": "00:02:19",
-			"piece": "Open Strings",
-			"medium": "Cello",
-			"approach": "Counting",	
-			"teacherSex": "Male",	
-			"level": "Beginner",	
-			"tags": ["Left Hand Technique","Pizzicato"]
-		},
-		{
-			"id": "xPnrymVvKkI",	
-			"duration": "00:01:03",	
-			"piece": "Random",	
-			"key": "D Major",	
-			"medium": "Cello",
-			"approach": "Singing Note Colors",	
-			"teacherSex": "Male",	
-			"level": "Beginner",		
-			"tags": ["Pizzicato"]
-		},
-		{
-			"id": "G8mdTW9IPOI",	
-			"duration": "00:01:17",	
-			"piece": "Random",	
-			"key": "D Major",	
-			"medium": "Cello",
-			"approach": "Singing Note Colors",	
-			"teacherSex": "Male",	
-			"level": "Beginner",		
-			"tags": ["Pizzicato"]
-		},
-		{
 			"id": "gzRjLp3H8q4",	
 			"duration": "00:01:18",	
-			"piece": "Random",	
+			"piece": "Technique: Random",	
 			"key": "D Major",	
-			"medium": "Cello",
+			"medium": "Cello: Pizzicato",
 			"approach": "Singing Note Names",	
 			"teacherSex": "Male",	
 			"level": "Beginner",		
@@ -330,9 +105,9 @@ define([], function () {
 		{
 			"id": "qGZgnQOuwDE",	
 			"duration": "00:01:02",	
-			"piece": "Open Strings",	
+			"piece": "Technique: Open Strings",	
 			"key": "D Major",	
-			"medium": "Cello",
+			"medium": "Cello: Pizzicato",
 			"approach": "Counting",	
 			"teacherSex": "Male",	
 			"level": "Beginner",		
@@ -343,7 +118,7 @@ define([], function () {
 			"duration": "00:01:31",	
 			"piece": "Twinkle Twinkle Little Star",	
 			"key": "D Major",
-			"medium": "Voice (Cello)",
+			"medium": "Body (Cello): Voice",
 			"approach": "Singing Note Names",
 			"teacherSex": "Male",	
 			"level": "Beginner"		
@@ -353,20 +128,500 @@ define([], function () {
 			"duration": "00:01:24",	
 			"piece": "Twinkle Twinkle Little Star",	
 			"key": "D Major",	
-			"medium": "Voice (Cello)",
+			"medium": "Body (Cello): Voice",
 			"approach": "Counting",	
 			"teacherSex": "Male",	
 			"level": "Beginner"		
 		},
 		{
-			"id": "05JeTvT-BC8",	
-			"duration": "00:01:34",	
-			"piece": "Random",	
-			"medium": "No Instrument: Hands",	
+			"id": "wU8Dx-qGV2A",	
+			"duration": "00:01:28",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Cello: Pizzicato",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "QAEBuYNOook",	
+			"duration": "00:02:29",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Cello: Pizzicato",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "0h0NlUgpR1I",	
+			"duration": "00:01:41",	
+			"piece": "Technique: Scale",	
+			"key": "D Major",	
+			"medium": "Cello: Arco",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "v4dr22sJfTA",	
+			"duration": "00:01:41",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body: Fingers",
 			"approach": "Counting",	
 			"teacherSex": "Male",	
-			"level": "Beginner",	
-			"tags": ["Clapping"]
+			"level": "Beginner"		
+		},
+		{
+			"id": "2o5NUsrdx30",	
+			"duration": "00:01:22",	
+			"piece": "Technique: Random",	
+			"key": "D Major",	
+			"medium": "Body: Fingers",
+			"approach": "Singing Fingerings",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "dY-zeaXPX-o",	
+			"duration": "00:01:22",	
+			"piece": "Technique: Random",	
+			"key": "D Major",	
+			"medium": "Body: Fingers",
+			"approach": "Singing Random",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "W23Vwi3aBwY",	
+			"duration": "00:01:00",	
+			"piece": "Technique: Random",	
+			"key": "D Major",	
+			"medium": "Body: Fingers",
+			"approach": "Singing Random",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "7gi-ygm8GUA",	
+			"duration": "00:01:13",	
+			"piece": "Technique: Random",	
+			"key": "D Major",	
+			"medium": "Body: Fingers",
+			"approach": "Singing Random",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "-KEjNvA9F34",	
+			"duration": "00:01:20",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Fingers",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "mt1dxVEFLzE",	
+			"duration": "00:02:23",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body: Fingers",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "qqkyO7kdAcA",	
+			"duration": "00:01:24",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body: Hands",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "h74_X29S7p8",	
+			"duration": "00:01:36",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body: Hands",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "afwhELV_f2w",	
+			"duration": "00:02:18",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body: Pencil",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "hYWTBvsTTl4",	
+			"duration": "00:01:11",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body: Pencil",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "cd2p5O70wMU",	
+			"duration": "00:03:02",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body: Pencil",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "29x3ApHmlq0",	
+			"duration": "00:01:52",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body: Pencil",
+			"approach": "Singing Words (English)",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "8FEZzcQKV6U",	
+			"duration": "00:02:29",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body: Pencil",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "j-x0DfoztP0",	
+			"duration": "00:01:11",	
+			"piece": "Technique: Random",	
+			"key": "D Major",	
+			"medium": "Body: Fingers",
+			"approach": "Singing Random",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "L9qsbklfZoY",	
+			"duration": "00:02:28",	
+			"piece": "Technique: Random",	
+			"key": "G Major",	
+			"medium": "Cello: Pizzicato",
+			"approach": "Singing Fingerings",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "DsstHUbxozM",	
+			"duration": "00:02:34",	
+			"piece": "Technique: Random",	
+			"key": "G Major",	
+			"medium": "Cello: Pizzicato",
+			"approach": "Singing Fingerings",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "FtVJ4vFk1oM",	
+			"duration": "00:02:39",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Cello: Pizzicato",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "QqEG6hijzqc",	
+			"duration": "00:02:36",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Cello: Pizzicato",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "D6aVk4YCMdA",	
+			"duration": "00:02:39",	
+			"piece": "Pictures at an Exhibition",	
+			"key": "G Major",	
+			"medium": "Cello: Pizzicato",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "WGn_4Wzgg4I",	
+			"duration": "00:04:26",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Cello: Pizzicato",
+			"approach": "Singing Note Colors",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "VDj5X_qAwG8",	
+			"duration": "00:06:17",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Voice",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "i8BO1xi5i_A",	
+			"duration": "00:03:29",	
+			"piece": "Solemnly Walking",	
+			"key": "D Minor",	
+			"medium": "Cello",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "FMgjGvrPZOE",	
+			"duration": "00:06:18",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Cello",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "Zuteq9-Ru20",	
+			"duration": "00:02:51",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Cello",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "6cYKz7_F840",	
+			"duration": "00:04:04",	
+			"piece": "Pictures at an Exhibition",	
+			"key": "G Major",	
+			"medium": "Cello: Pizzicato",
+			"approach": "Singing Note Colors",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "WHwpgbY3KP0",	
+			"duration": "00:01:41",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "ahx-mtq5NNs",	
+			"duration": "00:03:02",	
+			"piece": "Russian Melody",	
+			"key": "D Minor",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "Wv18GH2RLQM",	
+			"duration": "00:01:57",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "JRWqC_ZeP04",	
+			"duration": "00:02:28",	
+			"piece": "Pictures at an Exhibition",	
+			"key": "G Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "NJTxBrHUFQ8",	
+			"duration": "00:01:57",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "gXMn9LyNZ84",	
+			"duration": "00:03:52",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "zDPq9-daRFE",	
+			"duration": "00:01:40",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "kE-caJdtCmI",	
+			"duration": "00:01:40",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "G2CEFh3267k",	
+			"duration": "00:01:39",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "H6XU67-LcVY",	
+			"duration": "00:01:58",	
+			"piece": "Twinkle Twinkle Little Star",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "m_2M6F-JVEw",	
+			"duration": "00:02:47",	
+			"piece": "Russian Melody",	
+			"key": "D Minor",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "wJYrsa02SxA",	
+			"duration": "00:02:33",	
+			"piece": "Russian Melody",	
+			"key": "D Minor",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "QqaG7aznccI",	
+			"duration": "00:03:00",	
+			"piece": "Pictures at an Exhibition",	
+			"key": "G Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Colors",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "ebGMy692Dg8",	
+			"duration": "00:02:00",	
+			"piece": "Pictures at an Exhibition",	
+			"key": "G Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "QaeoTQXz97s",	
+			"duration": "00:03:21",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Colors",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "w6qcngdjZJg",	
+			"duration": "00:02:27",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "TG2is8ZtxJo",	
+			"duration": "00:02:36",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "VhFRoe_d6lE",	
+			"duration": "00:02:00",	
+			"piece": "Solemnly Walking",	
+			"key": "D Minor",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "aa8lUXcsNEc",	
+			"duration": "00:02:04",	
+			"piece": "Solemnly Walking",	
+			"key": "D Minor",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Counting",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
+		},
+		{
+			"id": "6XcBlt0YzeA",	
+			"duration": "00:01:38",	
+			"piece": "Ode To Joy",	
+			"key": "D Major",	
+			"medium": "Body (Cello): Sheet Music",
+			"approach": "Singing Note Names",	
+			"teacherSex": "Male",	
+			"level": "Beginner"		
 		}
 	];
 
