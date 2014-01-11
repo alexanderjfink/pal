@@ -15,12 +15,12 @@ define([], function() {
     loadPlayer: function(container, videoId) {
       new YT.Player(container, {
         videoId: videoId,
-        width: 336,
-        height: 180,
+        width: 306,
+        height: 150,
         playerVars: {
-          autoplay: 2,
+          autoplay: 4,
           controls: 0,
-          modestbranding: 1,
+          modestbranding: 0,
           rel: 0,
           showInfo: 0
         }
