@@ -15,8 +15,8 @@ define([], function() {
     loadPlayer: function(container, videoId) {
       new YT.Player(container, {
         videoId: videoId,
-        width: 306,
-        height: 150,
+        width: 286,
+        height: 130,
         playerVars: {
           autoplay: 0,
           controls: 0,
