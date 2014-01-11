@@ -18,9 +18,9 @@ define([], function() {
         width: 306,
         height: 150,
         playerVars: {
-          autoplay: 4,
+          autoplay: 0,
           controls: 0,
-          modestbranding: 0,
+          modestbranding: 2,
           rel: 0,
           showInfo: 0
         }
