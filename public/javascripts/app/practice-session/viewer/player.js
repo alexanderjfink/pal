@@ -15,13 +15,13 @@ define([], function() {
     loadPlayer: function(container, videoId) {
       new YT.Player(container, {
         videoId: videoId,
-        width: 186,
-        height: 30,
+        width: 356,
+        height: 200,
         playerVars: {
           autoplay: 1,
-          controls: 1,
-          modestbranding: 0,
-          rel: 1,
+          controls: 0,
+          modestbranding: 1,
+          rel: 0,
           showInfo: 0
         }
       });
