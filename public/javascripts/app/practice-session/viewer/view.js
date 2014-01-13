@@ -40,7 +40,7 @@ define(['text!./templates/viewer.html',
 
 				case "cello":
 
-					if (this.model.get('have-instrument') === "No") {
+					if (this.model.get('have-instrument') === "Yes") {
 						window.app.playlist.push(this.playlist.search({id: "G2CEFh3267k"})[0]);
 						window.app.playlist.push(this.playlist.search({id: "D9QNjwC_v1Y"})[0]);
 						window.app.playlist.push(this.playlist.search({id: "7mgctuOigu4"})[0]);

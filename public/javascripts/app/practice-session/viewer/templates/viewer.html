@@ -36,8 +36,6 @@
 					width: ($(window).width()),
 					videoId: window.app.playlist[currentVideoIndex].id,
 					enablejsapi: 1,
-					controls: 0,
-					autohide: 1,
 					events: {
 						'onReady': onPlayerReady,
 						'onStateChange': onPlayerStateChange,
@@ -48,8 +46,8 @@
 
 			function onPlayerReady() {
 				player.playVideo();
-				$("#piece").text(pieceName);
-				$('#piece').on('click', false);
+				// $("#piece").text(pieceName);
+				// $('#piece').on('click', false);
 				$("#start-playback").hide();
 				$(".has-form").show();
 			}
@@ -61,7 +59,7 @@
 						player.cueVideoById(window.app.playlist[currentVideoIndex].id);
 						player.playVideo();
 
-						$("#piece").text(window.app.playlist[currentVideoIndex].get('piece'));
+						// $("#piece").text(window.app.playlist[currentVideoIndex].get('piece'));
 						break;
 					
 					case YT.PlayerState.PAUSED:
@@ -83,7 +81,7 @@
 <nav class="top-bar bottom-bar" data-topbar> 
 		<ul class="title-area">
 			<li class="name">
-				<h1><a href="#" id="piece" class="piece">Loading Practice Set...</a></h1>
+				<h1><a href="#" id="piece" class="piece"><!-- Loading Practice Set...--></a></h1>
 			</li>
 			<!--<li class="toggle-topbar menu-icon"><a href="#"></a></li>-->
 		</ul>
