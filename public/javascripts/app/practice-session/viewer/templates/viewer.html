@@ -1,8 +1,20 @@
-<div class="flex-video"> 
+<div style="background: #000; height:100%;"> 
 	<div id="player-container">
 		<div id="player"></div>
 
 		<script>
+
+			function hideAddressBar() {
+				if(!window.location.hash) {
+					if(document.height < window.outerHeight) {
+						document.body.style.height = (window.outerHeight + 50) + 'px';
+					}
+					setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+				}
+			}
+			 
+			$(window).on("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
+			$(window).on("orientationchange", hideAddressBar );
 			
 			// 2. This code loads the IFrame Player API code asynchronously.
 			var tag = document.createElement('script');
@@ -15,30 +27,52 @@
 			//    after the API code downloads.
 			var player, 
 				currentVideoIndex = 0;
+				pieceName = window.app.playlist[currentVideoIndex].get('piece');
 
 
 			function onYouTubeIframeAPIReady() {
 				player = new YT.Player('player', {
-					height: '390',
-					width: '640',
+					height: ($(window).height() - ($(window).height() / 15)),
+					width: ($(window).width()),
 					videoId: window.app.playlist[currentVideoIndex].id,
 					enablejsapi: 1,
+					controls: 0,
+					autohide: 1,
 					events: {
 						'onReady': onPlayerReady,
-						'onStateChange': onPlayerStateChange
+						'onStateChange': onPlayerStateChange,
+
 					}
 				});
 			}
 
 			function onPlayerReady() {
 				player.playVideo();
+				$("#piece").text(pieceName);
+				$('#piece').on('click', false);
+				$("#start-playback").hide();
+				$(".has-form").show();
 			}
 
 			function onPlayerStateChange(event) {
-				if (event.data === YT.PlayerState.ENDED) {
-					currentVideoIndex++;
-					player.cueVideoById(window.app.playlist[currentVideoIndex].id);
-					player.playVideo();
+				switch (event.data) {
+					case YT.PlayerState.ENDED:
+						currentVideoIndex++;
+						player.cueVideoById(window.app.playlist[currentVideoIndex].id);
+						player.playVideo();
+
+						$("#piece").text(window.app.playlist[currentVideoIndex].get('piece'));
+						break;
+					
+					case YT.PlayerState.PAUSED:
+						$('#pause-playback').hide();
+						$('#start-playback').show();
+						break;
+
+					case YT.PlayerState.PLAYING:
+						$('#start-playback').hide();
+						$('#pause-playback').show();
+						break;
 				}
 			}
 		</script>
@@ -49,17 +83,17 @@
 <nav class="top-bar bottom-bar" data-topbar> 
 		<ul class="title-area">
 			<li class="name">
-				<h1><a href="#" class="piece">Current Song</a></h1>
+				<h1><a href="#" id="piece" class="piece">Loading Practice Set...</a></h1>
 			</li>
-			<li class="toggle-topbar menu-icon"><a href="#"></a></li>
+			<!--<li class="toggle-topbar menu-icon"><a href="#"></a></li>-->
 		</ul>
 		<section class="top-bar-section"> 
 			<!-- Right Nav Section --> 
 			<ul class="right"> 
 				<li class="divider"></li>
-				<li class="has-form">
-					<button class="button" id="pause-playback"><img src="images/icons/playback_pause_icon&16.png" alt="pause playback" /></button> 
-					<button class="button" id="start-playback"><img src="images/icons/playback_play_icon&16.png" alt="start playback" /></button> 
+				<li class="has-form hide">
+					<button class="button" id="pause-playback">PAUSE<!-- <img src="images/icons/playback_pause_icon&16.png" alt="pause playback" /> --></button> 
+					<button class="button" id="start-playback">PLAY<!-- <img src="images/icons/playback_play_icon&16.png" alt="start playback" /> --></button> 
 				</li> 
 			</ul> 
 			<!-- Left Nav Section --> 

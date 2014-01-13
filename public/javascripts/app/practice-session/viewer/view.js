@@ -31,42 +31,40 @@ define(['text!./templates/viewer.html',
 			switch(this.model.get('instrument')) {
 				case "no-instrument":
 					
-					window.app.playlist.push(this.playlist.search({id: "2o5NUsrdx30"}));
-					window.app.playlist.push(this.playlist.search({id: "H6XU67-LcVY"}));
-					window.app.playlist.push(this.playlist.search({id: "5VqXPSXRaXg"}));
-					window.app.playlist.push(this.playlist.search({id: "Vnqe2-nGqT8"}));
-					window.app.playlist.push(this.playlist.search({id: "kE-caJdtCmI"}));
-
+					window.app.playlist.push(this.playlist.search({id: "2o5NUsrdx30"})[0]);
+					window.app.playlist.push(this.playlist.search({id: "H6XU67-LcVY"})[0]);
+					window.app.playlist.push(this.playlist.search({id: "5VqXPSXRaXg"})[0]);
+					window.app.playlist.push(this.playlist.search({id: "Vnqe2-nGqT8"})[0]);
+					window.app.playlist.push(this.playlist.search({id: "kE-caJdtCmI"})[0]);
 					break;
 
 				case "cello":
 
 					if (this.model.get('have-instrument') === "No") {
-						window.app.playlist.push(this.playlist.search({id: "G2CEFh3267k"}));
-						window.app.playlist.push(this.playlist.search({id: "D9QNjwC_v1Y"}));
-						window.app.playlist.push(this.playlist.search({id: "7mgctuOigu4"}));
-						window.app.playlist.push(this.playlist.search({id: "Vnqe2-nGqT8"}));
-						window.app.playlist.push(this.playlist.search({id: "VDj5X_qAwG8"}));
+						window.app.playlist.push(this.playlist.search({id: "G2CEFh3267k"})[0]);
+						window.app.playlist.push(this.playlist.search({id: "D9QNjwC_v1Y"})[0]);
+						window.app.playlist.push(this.playlist.search({id: "7mgctuOigu4"})[0]);
+						window.app.playlist.push(this.playlist.search({id: "Vnqe2-nGqT8"})[0]);
+						window.app.playlist.push(this.playlist.search({id: "VDj5X_qAwG8"})[0]);
 					} else {
 						// If the user selects Cello, yes instrument, then show these videos, in this order
-						window.app.playlist.push(this.playlist.search({id: "DsstHUbxozM"}));
-						window.app.playlist.push(this.playlist.search({id: "QAEBuYNOook"}));
-						window.app.playlist.push(this.playlist.search({id: "H6XU67-LcVY"}));
-						window.app.playlist.push(this.playlist.search({id: "L9qsbklfZoY"}));
-						window.app.playlist.push(this.playlist.search({id: "Zuteq9-Ru20"}));
+						window.app.playlist.push(this.playlist.search({id: "DsstHUbxozM"})[0]);
+						window.app.playlist.push(this.playlist.search({id: "QAEBuYNOook"})[0]);
+						window.app.playlist.push(this.playlist.search({id: "H6XU67-LcVY"})[0]);
+						window.app.playlist.push(this.playlist.search({id: "L9qsbklfZoY"})[0]);
+						window.app.playlist.push(this.playlist.search({id: "Zuteq9-Ru20"})[0]);
 					}
 
 					break;
 
 				default:
 
-					window.app.playlist.push(this.playlist.search({id: "2o5NUsrdx30"}));
-					window.app.playlist.push(this.playlist.search({id: "H6XU67-LcVY"}));
-					window.app.playlist.push(this.playlist.search({id: "5VqXPSXRaXg"}));
-					window.app.playlist.push(this.playlist.search({id: "Vnqe2-nGqT8"}));
-					window.app.playlist.push(this.playlist.search({id: "kE-caJdtCmI"}));
+					window.app.playlist.push(this.playlist.search({id: "2o5NUsrdx30"})[0]);
+					window.app.playlist.push(this.playlist.search({id: "H6XU67-LcVY"})[0]);
+					window.app.playlist.push(this.playlist.search({id: "5VqXPSXRaXg"})[0]);
+					window.app.playlist.push(this.playlist.search({id: "Vnqe2-nGqT8"})[0]);
+					window.app.playlist.push(this.playlist.search({id: "kE-caJdtCmI"})[0]);
 			}
-			
 		},
 
 		events: {
